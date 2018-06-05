@@ -5,11 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
 @JsonIgnoreProperties(ignoreUnknown = true)  // Trick: pas viable en production
 class LieuJSON {
-    var id = Int
-    var name = String
-    var description = String
-    var longitude = Double
-    var latitude = Double
+    lateinit var Id: java.lang.Integer
+    lateinit var Name: String
+    lateinit var Description: String
+    lateinit var Longitude: java.lang.Double
+    lateinit var Latitude: java.lang.Double
 
 }
 

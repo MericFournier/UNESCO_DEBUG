@@ -28,9 +28,9 @@ class TestLieuActivity : AppCompatActivity() {
 
         val lieuList = arrayListOf<Lieu>()
 
-        lieuList.add(Lieu("Lieu 1", 20, 3.4536, 48.7463, "c'est un joli endroit"))
-        lieuList.add(Lieu("Lieu 2",30, 5.4029, 49.7463, "c'est cool ici"))
-        lieuList.add(Lieu("Lieu 3",40, 1.0938, 47.7463, "c'est styley"))
+        //lieuList.add(Lieu("Lieu 1", 20, 3.4536, 48.7463, "c'est un joli endroit"))
+        //lieuList.add(Lieu("Lieu 2",30, 5.4029, 49.7463, "c'est cool ici"))
+        //lieuList.add(Lieu("Lieu 3",40, 1.0938, 47.7463, "c'est styley"))
 
         // configuration de l'affichage à la verticale
 
@@ -67,7 +67,7 @@ class TestLieuActivity : AppCompatActivity() {
                 if(lieu is Lieu) {
                     Toast
                             .makeText(this@TestLieuActivity,
-                                    "lieu  : ${lieu.name}",
+                                    "lieu  : ${lieu.Name}",
                                     Toast.LENGTH_SHORT)
                             .show()
 
@@ -90,18 +90,19 @@ class TestLieuActivity : AppCompatActivity() {
         // Appel au WS
         LieuService.getLieu(object: LieuService.LieuServiceListener{
             override fun onReceiveResult(lieus: List<LieuJSON>) {
-
+                Log.d("okay","on a reussi")
                 itemAdapter.clear() // nettoyage de la liste avant de la remplir
 
                 // Remplissage de l'adapter à partir des objets ContactJSON, retransformé en Contact -> ContactItem
                 for(lieuJSON in lieus) {
 
-                    itemAdapter.add(LieuItem(Lieu(lieuJSON.name.toString(), lieuJSON.id, lieuJSON.longitude, lieuJSON.latitude, lieuJSON.description.toString())))
+
+                    itemAdapter.add(LieuItem(Lieu(lieuJSON.Name.toString(),lieuJSON.Id, lieuJSON.Longitude, lieuJSON.Latitude, lieuJSON.Description.toString())))
                 }
             }
 
             override fun onFailed() {
-
+                Log.d("okay","c la merde")
             }
 
         })

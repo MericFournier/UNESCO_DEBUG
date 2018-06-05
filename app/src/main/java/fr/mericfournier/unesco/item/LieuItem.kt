@@ -66,13 +66,13 @@ class LieuItem(var lieu: Lieu): AbstractItem<LieuItem, LieuItem.LieuViewHolder>(
         override fun bindView(item: LieuItem?, payloads: MutableList<Any>?) {
             // refresh UI
 
-            val lieu = item?.lieu // -> Contact? => un objet Contact potentiellement nul
+            val lieu = item?.lieu // ->
 
-            nameTextView?.text = lieu?.name
-            idTextView?.text = lieu?.id.toString()
-            descriptionTextView?.text = lieu?.description
-            latitudeTextView?.text = lieu?.latitude.toString()
-            longitudeTextView?.text = lieu?.longitude.toString()
+            nameTextView?.text = lieu?.Name
+            idTextView?.text = lieu?.Id.toString()
+            descriptionTextView?.text = lieu?.Description
+            latitudeTextView?.text = lieu?.Latitude.toString()
+            longitudeTextView?.text = lieu?.Longitude.toString()
         }
 
 

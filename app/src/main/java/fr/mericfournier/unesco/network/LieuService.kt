@@ -15,15 +15,13 @@ import android.util.Log
 class LieuService {
 
     interface LieuServiceListener {
-        fun onReceiveResult(contacts: List<LieuJSON>)
+        fun onReceiveResult(lieus: List<LieuJSON>)
         fun onFailed()
     }
 
     companion object {
         fun getLieu(listener: LieuServiceListener) {
-
-            val url = "https://unesco.antoine-dunn.fr/api/v1/site/12"
-
+            val url = "https://unesco.antoine-dunn.fr/api/v1/site/18"
             var request = BaseRequest
                     // appel une URL en GET et parse le JSON pour faire un objet de type ContactResult
                     .Builder<LieuResult>(Request.Method.GET, url, LieuResult::class.java)

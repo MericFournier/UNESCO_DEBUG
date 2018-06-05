@@ -18,7 +18,10 @@ class UnescoApp: Application() {
         super.onCreate()
 
         UnescoApp.instance = this
-        requestQueue = Volley.newRequestQueue(this)
+
+
+        requestQueue = Volley.newRequestQueue(applicationContext)
+        requestQueue?.start()
     }
 
 }
