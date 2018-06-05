@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CritereActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/critère__guildeline__left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/critère__guildeline__right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/critère__guideline__centre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/critère__button__back"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/arrow__back__item"
+        android:backgroundTint="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/critère__title"
+        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+        app:layout_constraintTop_toTopOf="@+id/critère__title" />
+
+        <TextView
+            android:id="@+id/critère__title"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/home__btn1"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/test_title"
+            app:layout_constraintStart_toEndOf="@+id/critère__button__back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/critère__reload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/arrowback"
+            android:backgroundTint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/critère__title"
+            app:layout_constraintEnd_toStartOf="@+id/critère__search"
+            app:layout_constraintStart_toEndOf="@+id/critère__title"
+            app:layout_constraintTop_toTopOf="@+id/critère__title" />
+
+        <Button
+            android:id="@+id/critère__search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shapeloupe"
+            android:backgroundTint="@android:color/background_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/critère__reload"
+            app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+            app:layout_constraintTop_toTopOf="@+id/critère__reload" />
+
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+            app:layout_constraintTop_toBottomOf="@+id/critère__title">
+
+            <LinearLayout
+                android:id="@+id/critère__horizontal__layout"
+                android:layout_width="wrap_content"
+                android:layout_height="759dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/critère__item1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/critère__item1__img"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginTop="20dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item1"
+                        app:srcCompat="@drawable/cover" />
+
+                    <TextView
+                        android:id="@+id/critère__item1__title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/critere__item__title"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/test_title"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item1__img" />
+
+                    <TextView
+                        android:id="@+id/critère__item1__text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:lineSpacingExtra="@dimen/default_gap"
+                        android:text="@string/critere__item__description"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="@dimen/text_p"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item1__img" />
+
+                    <Button
+                        android:id="@+id/critère__item1__tag1"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/home__blue"
+                        android:text="@string/cat_1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item1__text" />
+
+                    <Button
+                        android:id="@+id/critère__item1__tag2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/home__blue"
+                        android:text="@string/cat_1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        app:layout_constraintBottom_toBottomOf="@+id/button15"
+                        app:layout_constraintStart_toEndOf="@+id/button15"
+                        app:layout_constraintTop_toTopOf="@+id/button15" />
+
+                    <Button
+                        android:id="@+id/critère__item1__button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+                        android:text="@string/critere__item__button"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/critère__item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/critère__item2__img"
+                        android:layout_width="300dp"
+                        android:layout_height="280dp"
+                        android:layout_marginTop="20dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item2"
+                        app:srcCompat="@drawable/cover" />
+
+                    <TextView
+                        android:id="@+id/critère__item2__title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/critere__item__title"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/test_title"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item2__img" />
+
+                    <TextView
+                        android:id="@+id/critère__item2__text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:lineSpacingExtra="@dimen/default_gap"
+                        android:text="@string/critere__item__description"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="@dimen/text_p"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item2__img" />
+
+                    <Button
+                        android:id="@+id/critère__item2__tag1"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/home__blue"
+                        android:text="@string/cat_1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/critère__item2__text" />
+
+                    <Button
+                        android:id="@+id/critère__item2__tag2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/home__blue"
+                        android:text="@string/cat_1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        app:layout_constraintBottom_toBottomOf="@+id/button15"
+                        app:layout_constraintStart_toEndOf="@+id/button15"
+                        app:layout_constraintTop_toTopOf="@+id/button15" />
+
+                    <Button
+                        android:id="@+id/critère__item2__button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rounded_blue_border"
+                        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+                        android:text="@string/critere__item__button"
+                        app:layout_constraintEnd_toStartOf="@+id/critère__guildeline__right"
+                        app:layout_constraintStart_toStartOf="@+id/critère__guildeline__left"
+                        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

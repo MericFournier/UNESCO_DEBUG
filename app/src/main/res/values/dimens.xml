@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_p">14dp</dimen>
+    <dimen name="test_title">24dp</dimen>
+    <dimen name="hero__text">20dp</dimen>
+    <dimen name="small__text">12dp</dimen>
+    <dimen name="textblock">18sp</dimen>
+    <item name="center" type="dimen">50%</item>
+</resources>

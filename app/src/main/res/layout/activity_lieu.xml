@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LieuActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/place__guideline__left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/place__guideline__right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/place__guideline__centre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/place__favoris"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView11"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="620dp"
+        android:background="@drawable/favoris"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintTop_toTopOf="@+id/place__hero" />
+
+    <RelativeLayout
+        android:id="@+id/place__hero"
+        android:layout_width="0dp"
+        android:layout_height="659dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/place__hero__back"
+            android:layout_width="18dp"
+            android:layout_height="26dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView11"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/arrow__back__item" />
+
+        <Button
+            android:id="@+id/place__hero__tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignStart="@+id/place__hero__title"
+            android:layout_alignTop="@+id/place__hero__tag2"
+            android:background="@drawable/rounded_blue_border"
+            android:backgroundTint="@color/home__blue"
+            android:text="EKHFIEJFIEJF"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/place__hero__tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_blue_border"
+            android:backgroundTint="@color/home__blue"
+            android:text="FEFEFIEFHRF"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light" />
+
+        <ImageView
+            android:id="@+id/place__hero__img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lieu__hero" />
+
+        <ImageView
+            android:id="@+id/place__icon__place"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/place__hero__back"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-38dp"
+            android:layout_marginEnd="85dp"
+            app:srcCompat="@drawable/icon__place__item" />
+
+        <View
+            android:id="@+id/rectangleTest"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignBottom="@+id/place__hero__tag1"
+            android:layout_alignEnd="@+id/place__icon__place"
+            android:layout_marginBottom="-15dp"
+            android:layout_marginEnd="-85dp"
+            android:background="@drawable/rectangle" />
+
+        <TextView
+            android:id="@+id/place__hero__title"
+            android:layout_width="362dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="69dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/lieu__hero__title"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/test_title" />
+
+        <TextView
+            android:id="@+id/place__hero__description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/place__hero__back"
+            android:layout_alignEnd="@+id/place__hero__title"
+            android:layout_marginBottom="-38dp"
+            android:text="@string/lieu__hero__country"
+            android:textColor="@android:color/background_light"
+            android:textSize="@dimen/text_p" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/place__lieu__info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/lieu__hero__infos"
+        android:textColor="@color/red_text"
+        android:textSize="@dimen/small__text"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__hero" />
+
+    <TextView
+        android:id="@+id/place__description__main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:lineSpacingExtra="8sp"
+        android:text="Westminster Palace, rebuilt from the year 1840 on the site of important medieval remains, is a fine example of neo-Gothic architecture. The site – which also comprises the small medieval Church of Saint Margaret, built in Perpendicular Gothic style, and Westminster Abbey, where all the sovereigns since the 11th century have been crowned – is of great historic and symbolic significance."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__hero" />
+
+    <ImageView
+        android:id="@+id/place__img__main"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__description__main"
+        app:srcCompat="@drawable/imgp7"/>
+
+    <TextView
+        android:id="@+id/place__reg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/lieu__infos__registration"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__img__main" />
+
+
+    <TextView
+        android:id="@+id/place__size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lieu__infos__size"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__reg" />
+
+    <TextView
+        android:id="@+id/place__coordinate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lieu__infos__coordinate"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__size" />
+
+    <TextView
+        android:id="@+id/place__buffer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lieu__infos__buffer"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__coordinate" />
+
+    <TextView
+        android:id="@+id/place__ref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lieu__infos__reference"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/place__buffer" />
+
+    <TextView
+            android:id="@+id/place__registration__set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/text_p"
+            app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+            app:layout_constraintStart_toStartOf="@+id/place__guideline__centre"
+            app:layout_constraintTop_toBottomOf="@+id/place__img__main" />
+
+    <TextView
+        android:id="@+id/place__size__set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintTop_toBottomOf="@+id/place__registration__set" />
+
+    <TextView
+        android:id="@+id/place__coordinate__set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintTop_toBottomOf="@+id/place__size__set" />
+
+    <TextView
+        android:id="@+id/place__buffer__set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintTop_toBottomOf="@+id/place__coordinate__set" />
+
+    <TextView
+        android:id="@+id/place__ref__set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/text_p"
+        app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+        app:layout_constraintStart_toStartOf="@+id/place__guideline__centre"
+        app:layout_constraintTop_toBottomOf="@+id/place__buffer__set" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/place__map"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/place__guideline__right"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/place__guideline__left"
+            app:layout_constraintTop_toBottomOf="@+id/place__ref__set" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/home__blue"
+        android:text="@string/lieu__button__bottom"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place__map" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

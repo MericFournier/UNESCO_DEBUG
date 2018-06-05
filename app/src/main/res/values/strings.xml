@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">UNESCO</string>
+    <string name="home__hello">Bonjour KAAN</string>
+    <string name="home__btn">Do you know ?</string>
+    <string name="home__welcome">DISCOVER</string>
+    <string name="home__hero_title"> Historic Sanctuary of Machu Picchu </string>
+    <string name="cat_1">monument</string>
+
+    <string name="home__btn1">Masterpiece of humanity</string>
+    <string name="home__btn2">Exchanges of influences</string>
+    <string name="home__btn3">Testimonials</string>
+    <string name="home__btn4">Historical Architectures</string>
+    <string name="home__btn5">Traditional Establishments</string>
+    <string name="home__btn6">Living Traditions</string>
+    <string name="home__btn7">Natural beauties</string>
+    <string name="home__btn8">History of the earth</string>
+    <string name="home__btn9">Evolution</string>
+    <string name="home__btn10">Natural habitats</string>
+
+    <string name="lieu__hero__title">Westminster Palace and Westminster Abbey</string>
+    <string name="lieu__hero__country">England</string>
+    <string name="lieu__hero__infos">Ce lieu est en péril depuis 2012</string>
+    <string name="lieu__infos__registration">Registration date</string>
+    <string name="lieu__infos__size">Size</string>
+    <string name="lieu__infos__coordinate">Coordinated</string>
+    <string name="lieu__infos__buffer">Buffer</string>
+    <string name="lieu__infos__reference">Reference</string>
+    <string name="lieu__button__bottom">I WHENT THERE</string>
+
+    <string name="critere__item__title">Eiffel tower Machu Pichu Squalala</string>
+    <string name="critere__item__description">Les processus fluviaux, marins et éoliens permanents sur ce site ont créé un relief très varié avec des récifs coralliens de longues plages de sable noir…</string>
+    <string name="critere__item__button">see this place</string>
+
+    <string name="bookmarks__intro">Saved for laters</string>
+    <string name="bookmars__title">Bookmarks</string>
+    <string name="bookmarks__item__title">Monument Valley , USA</string>
+</resources>

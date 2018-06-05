@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavorisActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bookmarks__guideline__left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bookmarks__guideline__right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <RelativeLayout
+        android:id="@+id/bookmarks__item__1"
+        android:layout_width="0dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/home__blue"
+        android:backgroundTint="@color/greyLisght"
+        android:elevation="20dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarks__guideline__right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bookmarks__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+        <ImageView
+            android:id="@+id/bookmarks__item__1__img"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/block1" />
+
+        <TextView
+            android:id="@+id/bookmarks__item__1__text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bookmarks__item__1__img"
+            android:text="@string/bookmarks__item__title"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/textblock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bookmarks__item__1__img" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bookmarks__item__2"
+        android:layout_width="0dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/home__blue"
+        android:backgroundTint="@color/greyLisght"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarks__guideline__right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bookmarks__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/bookmarks__item__1">
+
+        <ImageView
+            android:id="@+id/bookmarks__item__2__img"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/block1" />
+
+        <TextView
+            android:id="@+id/bookmarks__item__2__text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bookmarks__item__2__img"
+            android:text="@string/bookmarks__item__title"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/textblock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bookmarks__item__2__img" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/bookmarks__intro"
+        android:textColor="@color/home__blue"
+        app:layout_constraintStart_toStartOf="@+id/bookmarks__guideline__left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/bookmars__title"
+        android:textColor="@android:color/background_dark"
+        android:textSize="@dimen/test_title"
+        app:layout_constraintStart_toStartOf="@+id/bookmarks__guideline__left"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarks__guideline__right"
+        app:layout_constraintTop_toTopOf="@+id/textView32"
+        app:srcCompat="@drawable/shapeloupe" />
+</android.support.constraint.ConstraintLayout>
+
+</ScrollView>
