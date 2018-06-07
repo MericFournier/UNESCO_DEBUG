@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/yourStatisticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Your statistic"
+        android:textColorHint="@color/home__blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:hint="Profile"
+        android:textColorHint="@color/home__dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourStatisticTextView" />
+
+    <ImageView
+        android:id="@+id/parametersView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/cover"
+        app:civ_border_color="@android:color/transparent"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextView" />
+
+    <TextView
+        android:id="@+id/firstnameProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="Kaan"
+        android:textColorHint="@color/home__dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/lastnameProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="Roussel"
+        android:textColorHint="@color/home__dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameProfileTextView" />
+
+    <TextView
+        android:id="@+id/travellerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Traveller"
+        android:textColorHint="@color/home__blue"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameProfileTextView" />
+
+    <ImageView
+        android:id="@+id/localImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:srcCompat="@drawable/local" />
+
+    <TextView
+        android:id="@+id/LocalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="From Paris"
+        android:textColorHint="@color/home__blue"
+        app:layout_constraintBottom_toBottomOf="@+id/localImageView"
+        app:layout_constraintStart_toEndOf="@+id/localImageView"
+        app:layout_constraintTop_toTopOf="@+id/localImageView" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:hint="I am a super cool and super smart to take care of 4 big trips plans in XYZ company. I loves to travel and work remotly."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/localImageView" />
+
+    <ImageView
+        android:id="@+id/bluePlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        app:srcCompat="@drawable/bgblue" />
+
+    <TextView
+        android:id="@+id/textHeritageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="35"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/bluePlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/bluePlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/bluePlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/heritageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Heritages visited"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/bluePlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/bluePlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textHeritageTextView" />
+
+    <ImageView
+        android:id="@+id/redPlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/bluePlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        app:srcCompat="@drawable/bgred" />
+
+    <TextView
+        android:id="@+id/textDiscoveryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="63"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/redPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/redPlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/redPlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/discoveryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Discovery read"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/redPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/redPlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textDiscoveryTextView" />
+
+    <ImageView
+        android:id="@+id/yellowPlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluePlaceholderImageView"
+        app:srcCompat="@drawable/bgyellow" />
+
+    <TextView
+        android:id="@+id/textCountryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="21"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/yellowPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/yellowPlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/yellowPlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/countryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Country"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/yellowPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/yellowPlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textCountryTextView" />
+
+    <ImageView
+        android:id="@+id/greenPlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/yellowPlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/redPlaceholderImageView"
+        app:srcCompat="@drawable/bggreen" />
+
+    <TextView
+        android:id="@+id/textBookmarksTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="180"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/greenPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/greenPlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/greenPlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/bookmarksTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Bookmarks"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/greenPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/greenPlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textBookmarksTextView" />
+
+    <ImageView
+        android:id="@+id/purplePlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellowPlaceholderImageView"
+        app:srcCompat="@drawable/bgpurple" />
+
+    <TextView
+        android:id="@+id/textContinentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="Europe"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/purplePlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/purplePlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/purplePlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/continentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Favorite Continent"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/purplePlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/purplePlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textContinentTextView" />
+
+    <ImageView
+        android:id="@+id/pinkPlaceholderImageView"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/purplePlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/greenPlaceholderImageView"
+        app:srcCompat="@drawable/bgpink" />
+
+    <TextView
+        android:id="@+id/textFavoriteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:hint="France"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/pinkPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/pinkPlaceholderImageView"
+        app:layout_constraintTop_toTopOf="@+id/pinkPlaceholderImageView" />
+
+    <TextView
+        android:id="@+id/favoriteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Favorite Country"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/pinkPlaceholderImageView"
+        app:layout_constraintStart_toStartOf="@+id/pinkPlaceholderImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textFavoriteTextView" />
+
+</android.support.constraint.ConstraintLayout>

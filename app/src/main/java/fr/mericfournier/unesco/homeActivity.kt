@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.res.ResourcesCompat
+<<<<<<< HEAD
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
@@ -19,6 +20,10 @@ import android.support.design.widget.BottomNavigationView
 import android.view.View
 //import android.widget.Toast
 
+=======
+import fr.mericfournier.unesco.profile.UserJSON
+import fr.mericfournier.unesco.profile.UserService
+>>>>>>> ac583a2c17dd8e98c2d679278862bc103e694f9d
 
 class homeActivity : AppCompatActivity() {
 

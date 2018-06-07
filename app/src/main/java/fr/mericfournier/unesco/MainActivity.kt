@@ -1,11 +1,16 @@
 package fr.mericfournier.unesco
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+<<<<<<< HEAD
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
+=======
+import kotlinx.android.synthetic.main.activity_main.*
+>>>>>>> ac583a2c17dd8e98c2d679278862bc103e694f9d
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+<<<<<<< HEAD
         Log.d("KOTLIN_APP",
                 ""+"teest")
 
@@ -27,5 +33,7 @@ class MainActivity : AppCompatActivity() {
             test1()
         }
 
+=======
+>>>>>>> ac583a2c17dd8e98c2d679278862bc103e694f9d
     }
 }

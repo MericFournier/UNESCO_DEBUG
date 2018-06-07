@@ -16,8 +16,7 @@ import fr.mericfournier.unesco.network.LieuService
 import kotlinx.android.synthetic.main.activity_test_contact.*
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-
-
+import fr.mericfournier.unesco.network.ListeLieu
 
 
 class TestLieuActivity : AppCompatActivity() {
@@ -26,17 +25,14 @@ class TestLieuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_contact)
 
-        val lieuList = arrayListOf<Lieu>()
+        val lieuList = ListeLieu.getLieu()
 
-        //lieuList.add(Lieu("Lieu 1", 20, 3.4536, 48.7463, "c'est un joli endroit"))
-        //lieuList.add(Lieu("Lieu 2",30, 5.4029, 49.7463, "c'est cool ici"))
-        //lieuList.add(Lieu("Lieu 3",40, 1.0938, 47.7463, "c'est styley"))
 
         // configuration de l'affichage à la verticale
 
         // LinearLayoutManager || GridLayoutManager
         //lieuRecyclerView.layoutManager = LinearLayoutManager(this,
-                //LinearLayoutManager.VERTICAL, false);
+        //LinearLayoutManager.VERTICAL, false);
 
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -87,25 +83,7 @@ class TestLieuActivity : AppCompatActivity() {
         })
 
 
-        // Appel au WS
-        LieuService.getLieu(object: LieuService.LieuServiceListener{
-            override fun onReceiveResult(lieus: List<LieuJSON>) {
-                Log.d("okay","on a reussi")
-                itemAdapter.clear() // nettoyage de la liste avant de la remplir
 
-                // Remplissage de l'adapter à partir des objets ContactJSON, retransformé en Contact -> ContactItem
-                for(lieuJSON in lieus) {
-
-
-                    itemAdapter.add(LieuItem(Lieu(lieuJSON.Name.toString(),lieuJSON.Id, lieuJSON.Longitude, lieuJSON.Latitude, lieuJSON.Description.toString())))
-                }
-            }
-
-            override fun onFailed() {
-                Log.d("okay","c la merde")
-            }
-
-        })
 
 
     }

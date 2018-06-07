@@ -65,7 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/profiliconebleu"
+        android:src="@drawable/lock"
         app:layout_constraintBottom_toBottomOf="@+id/passwordEditText"
         app:layout_constraintStart_toStartOf="@+id/passwordEditText"
         app:layout_constraintTop_toTopOf="@+id/passwordEditText"
